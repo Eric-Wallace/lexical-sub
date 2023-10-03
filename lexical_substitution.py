@@ -62,6 +62,6 @@ with torch.inference_mode():
         sorted_paraphrases = sorted(paraphrase_probs, key=lambda x: x[1], reverse=True)[:number_of_paraphrases_to_select]
         all_paraphrases.extend([p[0] for p in sorted_paraphrases])
         
-        for p in all_paraphrases:
+        for p_idx, p in enumerate(all_paraphrases):
             print(p)
-        print()
+        print('\n\n')
